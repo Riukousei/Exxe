@@ -4,25 +4,43 @@ using UnityEngine;
 
 public class MovimientoJugador : MonoBehaviour
 {
-    public float velocidadDeMovimiento = 2f;
+    public float velocidadDeMovimiento = 5f;
     private float desplazamientoX, desplazamientoY;
     private Vector2 direccionDeMovimiento;
     private Rigidbody2D rbPersonaje;
-    // Start is called before the first frame update
-    void Start()
+    public Animator playerAnimator;
+    // Es la primera en llamarse cuando el juego se ejecuta
+    void Awake()
     {
         rbPersonaje = this.GetComponent<Rigidbody2D>();
+        playerAnimator = GetComponent<Animator>();
+    }
+    // Es la segunda en llamarse cuando el juego se ejecuta
+    void OnEnable()
+    {
+        
+    }
+    // Se llama después del primer frame
+    void Start()
+    {
+        
     }
 
-    // Update is called once per frame
+    // Es llamada 1 vez por frame
     void Update()
     {
         CapturaDePulsaciones();
+        playerAnimator.SetFloat("Horizontal", Input.GetAxis("Horizontal"));
+
+        playerAnimator.SetFloat("Horizontal", desplazamientoX);
+        playerAnimator.SetFloat("Magnitude", direccionDeMovimiento.sqrMagnitude);
+
     }
 
     private void FixedUpdate()
     {
         MovimientoDelPersonaje();
+        
     }
 
     void CapturaDePulsaciones()
@@ -33,6 +51,6 @@ public class MovimientoJugador : MonoBehaviour
     }
     void MovimientoDelPersonaje()
     {
-        rbPersonaje.velocity = new Vector2(direccionDeMovimiento.x * velocidadDeMovimiento, direccionDeMovimiento.y * velocidadDeMovimiento);
+        rbPersonaje.MovePosition(rbPersonaje.position + direccionDeMovimiento * velocidadDeMovimiento * Time.fixedDeltaTime);
     }
 }
