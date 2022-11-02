@@ -34,6 +34,7 @@ public class MovimientoJugador : MonoBehaviour
 
         playerAnimator.SetFloat("Horizontal", desplazamientoX);
         playerAnimator.SetFloat("Magnitude", direccionDeMovimiento.sqrMagnitude);
+        FlipPersonaje();
 
     }
 
@@ -48,6 +49,14 @@ public class MovimientoJugador : MonoBehaviour
         desplazamientoX = Input.GetAxisRaw("Horizontal");
         desplazamientoY = Input.GetAxisRaw("Vertical");
         direccionDeMovimiento = new Vector2(desplazamientoX, desplazamientoY).normalized;
+    }
+
+    void FlipPersonaje()
+    {
+        if (desplazamientoX > 0.01f)
+            transform.localScale = Vector3.one;
+        else if (desplazamientoX < -0.01f)
+            transform.localScale = new Vector3(-1, 1, 1);
     }
     void MovimientoDelPersonaje()
     {
