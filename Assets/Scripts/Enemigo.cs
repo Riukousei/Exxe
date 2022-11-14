@@ -9,13 +9,46 @@ public class Enemigo : MonoBehaviour
     [SerializeField] private float velocidadAtaque = 1f;
     private float puedeAtacar;
     private Transform objetivo;
+    [SerializeField] private Transform[] puntosMovimiento;
+    [SerializeField] private float distanciaMinima=0.02f; //Distancia minima para el patrullaje
+    private int numeroAleatorio;
+    private SpriteRenderer spriteRenderer; //Controla cómo se ve el personaje
+
+    private void Start()
+    {
+        numeroAleatorio = Random.Range(0,puntosMovimiento.Length);
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        Girar();
+    }
 
     private void Update()
     {
         if (objetivo != null)
         {
-            float step = speed * Time.deltaTime; ;
+            float step = speed * Time.deltaTime;
             transform.position = Vector2.MoveTowards(transform.position, objetivo.position, step);
+        }
+        else
+        {
+            float step = speed * Time.deltaTime;
+            transform.position = Vector2.MoveTowards(transform.position, puntosMovimiento[numeroAleatorio].position, step);
+            if (Vector2.Distance(transform.position, puntosMovimiento[numeroAleatorio].position) < distanciaMinima)
+            {
+                numeroAleatorio = Random.Range(0, puntosMovimiento.Length);
+                Girar();
+            }
+        }
+    }
+
+    private void Girar()
+    {
+        if (transform.position.x < puntosMovimiento[numeroAleatorio].position.x)
+        {
+            spriteRenderer.flipX = true;
+        }
+        else
+        {
+            spriteRenderer.flipX = false;
         }
     }
 
@@ -41,7 +74,7 @@ public class Enemigo : MonoBehaviour
         if(other.gameObject.tag == "Player")
         {
             objetivo = other.transform;
-            //Debug.Log(objetivo);
+            Debug.Log(objetivo);
         }
     }
 
@@ -50,7 +83,7 @@ public class Enemigo : MonoBehaviour
         if(other.gameObject.tag == "Player")
         {
             objetivo = null;
-            //Debug.Log(objetivo);
+            Debug.Log(objetivo);
         }
     }
 }
