@@ -30,9 +30,7 @@ public class MovimientoJugador : MonoBehaviour
     void Update()
     {
         CapturaDePulsaciones();
-        playerAnimator.SetFloat("Horizontal", Input.GetAxis("Horizontal"));
-
-        playerAnimator.SetFloat("Horizontal", desplazamientoX);
+        //playerAnimator.SetFloat("Horizontal", Mathf.Abs(desplazamientoX));
         playerAnimator.SetFloat("Magnitude", direccionDeMovimiento.sqrMagnitude);
         FlipPersonaje();
 

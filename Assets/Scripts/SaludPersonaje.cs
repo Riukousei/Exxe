@@ -6,6 +6,7 @@ public class SaludPersonaje : MonoBehaviour
 {
     private float vida = 0f;
     [SerializeField] private float vidaMaxima = 100f;
+    public Animator playerAnimator;
 
     private void Start()
     {
@@ -22,8 +23,13 @@ public class SaludPersonaje : MonoBehaviour
         }
         else if(vida <= 0f)
         {
-            vida = 0f;
-            Debug.Log("Game Over");
+            Muerte();
         }
+    }
+    private void Muerte()
+    {
+        vida = 0f;
+        Debug.Log("Game Over");
+        playerAnimator.SetTrigger("Muerte");
     }
 }
