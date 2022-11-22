@@ -9,21 +9,12 @@ public class MovimientoJugador : MonoBehaviour
     private Vector2 direccionDeMovimiento;
     private Rigidbody2D rbPersonaje;
     public Animator playerAnimator;
+    private bool mirandoDerecha = true;
     // Es la primera en llamarse cuando el juego se ejecuta
     void Awake()
     {
         rbPersonaje = this.GetComponent<Rigidbody2D>();
         playerAnimator = GetComponent<Animator>();
-    }
-    // Es la segunda en llamarse cuando el juego se ejecuta
-    void OnEnable()
-    {
-        
-    }
-    // Se llama después del primer frame
-    void Start()
-    {
-        
     }
 
     // Es llamada 1 vez por frame
@@ -51,10 +42,18 @@ public class MovimientoJugador : MonoBehaviour
 
     void FlipPersonaje()
     {
-        if (desplazamientoX > 0.01f)
-            transform.localScale = Vector3.one;
-        else if (desplazamientoX < -0.01f)
-            transform.localScale = new Vector3(-1, 1, 1);
+
+        if(desplazamientoX>0 && !mirandoDerecha)
+        {
+            mirandoDerecha = !mirandoDerecha;
+            transform.eulerAngles = new Vector3(0, transform.eulerAngles.y + 180, 0);
+        }
+        else if(desplazamientoX<0 && mirandoDerecha)
+        {
+            mirandoDerecha = !mirandoDerecha;
+            transform.eulerAngles = new Vector3(0, transform.eulerAngles.y + 180, 0);
+
+        }
     }
     void MovimientoDelPersonaje()
     {

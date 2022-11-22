@@ -62,6 +62,7 @@ public class Enemigo : MonoBehaviour
             if (velocidadAtaque <= puedeAtacar)
             {
                 other.gameObject.GetComponent<SaludPersonaje>().UpdateHealth(-dañoAtaque);
+                Debug.Log("Haciendo daño");
                 puedeAtacar = 0f;
             }
             else

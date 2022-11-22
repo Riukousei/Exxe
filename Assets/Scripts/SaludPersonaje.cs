@@ -16,6 +16,7 @@ public class SaludPersonaje : MonoBehaviour
     public void UpdateHealth(float mod)
     {
         vida += mod;
+        Debug.Log(vida);
 
         if (vida > vidaMaxima)
         {

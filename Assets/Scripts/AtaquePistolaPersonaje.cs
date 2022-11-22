@@ -29,18 +29,5 @@ public class AtaquePistolaPersonaje : MonoBehaviour
         animator.SetTrigger("attack");
         cooldownTimer = 1.5f;
         Instantiate(proyectiles, firePoint.position, firePoint.rotation);
-
-        //proyectiles[EncontrarProyectil()].transform.position = firePoint.position;
-        //proyectiles[EncontrarProyectil()].GetComponent<Bala>().SetDirection(Mathf.Sign(transform.localScale.x));
     }
-
-    /*private int EncontrarProyectil()
-    {
-        for (int i = 0; i < proyectiles.Length; i++)
-        {
-            if (!proyectiles[i].activeInHierarchy)
-                return i;
-        }
-        return 0;
-    }*/
 }
