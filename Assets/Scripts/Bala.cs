@@ -12,6 +12,8 @@ public class Bala : MonoBehaviour
     private Animator animator;
     private BoxCollider2D boxCollider;
 
+    [SerializeField] private float daño;
+
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -29,11 +31,20 @@ public class Bala : MonoBehaviour
             gameObject.SetActive(false);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionStay2D(Collision2D collision)
     {
-        impacto = true;
-        boxCollider.enabled = false;
-        animator.SetTrigger("explota");
+        //if (collision.gameObject.tag == "Enemy")
+        //{
+            
+            impacto = true;
+            collision.gameObject.GetComponent<Enemigo>().TomarDaño(daño);
+            boxCollider.enabled = false;
+            gameObject.SetActive(false);
+            //Debug.Log(collision);
+            animator.SetTrigger("explota");
+            Desactivar();
+        //}
+        
     }
     public void SetDirection (float _direction)
     {

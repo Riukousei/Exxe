@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.Http.Headers;
 using UnityEngine;
 
 public class Enemigo : MonoBehaviour
@@ -13,6 +14,8 @@ public class Enemigo : MonoBehaviour
     [SerializeField] private float distanciaMinima=0.02f; //Distancia minima para el patrullaje
     private int numeroAleatorio;
     private SpriteRenderer spriteRenderer; //Controla cómo se ve el personaje
+    [SerializeField] private float Vida;
+    [SerializeField] private GameObject efectoMuerte;
 
     private void Start()
     {
@@ -85,5 +88,20 @@ public class Enemigo : MonoBehaviour
             objetivo = null;
             Debug.Log(objetivo);
         }
+    }
+
+    public void TomarDaño(float daño)
+    {
+        Vida -= daño;
+        if(Vida <= 0)
+        {
+            Muerte();
+        }
+    }
+
+    private void Muerte()
+    {
+        Instantiate(efectoMuerte, transform.position, Quaternion.identity);
+        Destroy(gameObject);
     }
 }
