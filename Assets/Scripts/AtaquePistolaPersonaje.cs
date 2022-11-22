@@ -7,7 +7,7 @@ public class AtaquePistolaPersonaje : MonoBehaviour
 {
     [SerializeField] private float CooldownAtaque;
     [SerializeField] private Transform firePoint;
-    [SerializeField] private GameObject[] proyectiles;
+    [SerializeField] private GameObject proyectiles;
     private Animator animator;
     private MovimientoJugador MovimientoJugador;
     private float cooldownTimer = Mathf.Infinity;
@@ -28,12 +28,13 @@ public class AtaquePistolaPersonaje : MonoBehaviour
     {
         animator.SetTrigger("attack");
         cooldownTimer = 1.5f;
+        Instantiate(proyectiles, firePoint.position, firePoint.rotation);
 
-        proyectiles[EncontrarProyectil()].transform.position = firePoint.position;
-        proyectiles[EncontrarProyectil()].GetComponent<Bala>().SetDirection(Mathf.Sign(transform.localScale.x));
+        //proyectiles[EncontrarProyectil()].transform.position = firePoint.position;
+        //proyectiles[EncontrarProyectil()].GetComponent<Bala>().SetDirection(Mathf.Sign(transform.localScale.x));
     }
 
-    private int EncontrarProyectil()
+    /*private int EncontrarProyectil()
     {
         for (int i = 0; i < proyectiles.Length; i++)
         {
@@ -41,5 +42,5 @@ public class AtaquePistolaPersonaje : MonoBehaviour
                 return i;
         }
         return 0;
-    }
+    }*/
 }

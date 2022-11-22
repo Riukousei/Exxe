@@ -22,6 +22,25 @@ public class Bala : MonoBehaviour
 
     private void Update()
     {
+        transform.Translate(Vector2.right*Velocidad*Time.deltaTime);
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            collision.gameObject.GetComponent<Enemigo>().TomarDaño(daño);
+            Destroy(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
+    }
+
+    /*private void Update()
+    {
         if (impacto) return;
         float VelocidadMovimiento = Velocidad * Time.deltaTime * direccion;
         transform.Translate(VelocidadMovimiento, 0, 0);
@@ -33,8 +52,8 @@ public class Bala : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        //if (collision.gameObject.tag == "Enemy")
-        //{
+        if (collision.gameObject.tag == "Enemy")
+        {
             
             impacto = true;
             collision.gameObject.GetComponent<Enemigo>().TomarDaño(daño);
@@ -43,7 +62,11 @@ public class Bala : MonoBehaviour
             //Debug.Log(collision);
             animator.SetTrigger("explota");
             Desactivar();
-        //}
+        }
+        else
+        {
+            Desactivar();
+        }
         
     }
     public void SetDirection (float _direction)
@@ -63,5 +86,5 @@ public class Bala : MonoBehaviour
     private void Desactivar()
     {
         gameObject.SetActive(false);
-    }
+    }*/
 }
