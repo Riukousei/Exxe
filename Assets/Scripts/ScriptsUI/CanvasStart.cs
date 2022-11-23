@@ -7,6 +7,6 @@ public class CanvasStart : MonoBehaviour
 {
     public void Jugar()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(3);
     }
 }
