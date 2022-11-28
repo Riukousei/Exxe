@@ -10,6 +10,8 @@ public class MovimientoJugador : MonoBehaviour
     private Rigidbody2D rbPersonaje;
     public Animator playerAnimator;
     private bool mirandoDerecha = true;
+    public bool sePuedeMover = true;
+    [SerializeField] private Vector2 velocidadRebote;
     // Es la primera en llamarse cuando el juego se ejecuta
     void Awake()
     {
@@ -29,8 +31,14 @@ public class MovimientoJugador : MonoBehaviour
 
     private void FixedUpdate()
     {
-        MovimientoDelPersonaje();
-        
+        if (sePuedeMover)
+        {
+            MovimientoDelPersonaje();
+        }
+    }
+    public void Rebote(Vector2 puntoGolpe)
+    {
+        rbPersonaje.velocity = new Vector2(-velocidadRebote.x * puntoGolpe.x, 0); //verificar si velocidadRebote.y no se tiene que igualar a 0
     }
 
     void CapturaDePulsaciones()

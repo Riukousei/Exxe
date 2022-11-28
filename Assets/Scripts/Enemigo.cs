@@ -16,6 +16,7 @@ public class Enemigo : MonoBehaviour
     private SpriteRenderer spriteRenderer; //Controla cómo se ve el personaje
     [SerializeField] private float Vida;
     [SerializeField] private GameObject efectoMuerte;
+    private bool mirandoDerecha = true;
 
     private void Start()
     {
@@ -30,6 +31,7 @@ public class Enemigo : MonoBehaviour
         {
             float step = speed * Time.deltaTime;
             transform.position = Vector2.MoveTowards(transform.position, objetivo.position, step);
+            MirarJugador();
         }
         else
         {
@@ -45,13 +47,33 @@ public class Enemigo : MonoBehaviour
 
     private void Girar()
     {
-        if (transform.position.x < puntosMovimiento[numeroAleatorio].position.x)
+        if ((transform.position.x < puntosMovimiento[numeroAleatorio].position.x) && (!mirandoDerecha))
         {
-            spriteRenderer.flipX = true;
+            //spriteRenderer.flipX = true;
+            mirandoDerecha = !mirandoDerecha;
+            transform.eulerAngles = new Vector3(0, transform.eulerAngles.y + 180, 0);
         }
-        else
+        else if((transform.position.x > puntosMovimiento[numeroAleatorio].position.x) && (mirandoDerecha))
         {
-            spriteRenderer.flipX = false;
+            //spriteRenderer.flipX = false;
+            mirandoDerecha = !mirandoDerecha;
+            transform.eulerAngles = new Vector3(0, transform.eulerAngles.y + 180, 0);
+        }
+    }
+
+    private void MirarJugador()
+    {
+        if ((transform.position.x < objetivo.position.x)&&(!mirandoDerecha))
+        {
+            //spriteRenderer.flipX = true;
+            mirandoDerecha = !mirandoDerecha;
+            transform.eulerAngles = new Vector3(0, transform.eulerAngles.y + 180, 0);
+        }
+        else if ((transform.position.x > objetivo.position.x)&& (mirandoDerecha))
+        {
+            //spriteRenderer.flipX = false;
+            mirandoDerecha = !mirandoDerecha;
+            transform.eulerAngles = new Vector3(0, transform.eulerAngles.y + 180, 0);
         }
     }
 
@@ -61,7 +83,7 @@ public class Enemigo : MonoBehaviour
         {
             if (velocidadAtaque <= puedeAtacar)
             {
-                other.gameObject.GetComponent<SaludPersonaje>().UpdateHealth(-dañoAtaque);
+                other.gameObject.GetComponent<SaludPersonaje>().UpdateHealth(dañoAtaque,other.GetContact(0).normal);
                 Debug.Log("Haciendo daño");
                 puedeAtacar = 0f;
             }
