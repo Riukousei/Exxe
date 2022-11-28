@@ -17,9 +17,11 @@ public class Enemigo : MonoBehaviour
     [SerializeField] private float Vida;
     [SerializeField] private GameObject efectoMuerte;
     private bool mirandoDerecha = true;
+    public Animator animatorEnemigo;
 
     private void Start()
     {
+        animatorEnemigo = GetComponent<Animator>();
         numeroAleatorio = Random.Range(0,puntosMovimiento.Length);
         spriteRenderer = GetComponent<SpriteRenderer>();
         Girar();
@@ -83,6 +85,7 @@ public class Enemigo : MonoBehaviour
         {
             if (velocidadAtaque <= puedeAtacar)
             {
+                animatorEnemigo.SetTrigger("Ataque");
                 other.gameObject.GetComponent<SaludPersonaje>().UpdateHealth(dañoAtaque,other.GetContact(0).normal);
                 Debug.Log("Haciendo daño");
                 puedeAtacar = 0f;
@@ -116,7 +119,8 @@ public class Enemigo : MonoBehaviour
     public void TomarDaño(float daño)
     {
         Vida -= daño;
-        if(Vida <= 0)
+        animatorEnemigo.SetTrigger("Golpeado");
+        if (Vida <= 0)
         {
             Muerte();
         }

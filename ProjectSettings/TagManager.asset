@@ -13,8 +13,8 @@ TagManager:
   - Water
   - UI
   - Jugador
+  - Fondo Enemigos
   - Enemigos
-  - 
   - 
   - 
   - 
@@ -41,4 +41,25 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 3661440355
+    locked: 0
+  - name: Balas
+    uniqueID: 4243995911
+    locked: 0
+  - name: Fondo Enemigos
+    uniqueID: 1628174509
+    locked: 0
+  - name: Enemigos
+    uniqueID: 1669297757
+    locked: 0
+  - name: NPC
+    uniqueID: 4184353247
+    locked: 0
+  - name: Jugador
+    uniqueID: 2385990571
+    locked: 0
+  - name: Foreground
+    uniqueID: 893493899
     locked: 0

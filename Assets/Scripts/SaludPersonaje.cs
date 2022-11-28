@@ -71,10 +71,11 @@ public class SaludPersonaje : MonoBehaviour
     }
     private IEnumerator DesactivarColision()
     {
-        Physics2D.IgnoreLayerCollision(6,7,true);
+        Physics2D.IgnoreLayerCollision(6,8,true);
         yield return new WaitForSeconds(tiempoPerdidaControl);
-        Physics2D.IgnoreLayerCollision(6, 7, false);
+        Physics2D.IgnoreLayerCollision(6,8, false);
     }
 
 
 }
+    
