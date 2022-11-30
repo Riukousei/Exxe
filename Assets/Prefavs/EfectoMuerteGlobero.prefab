@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7081255593304691870}
   - component: {fileID: 2004110635960372857}
   - component: {fileID: 7031323326633977615}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EfectoMuerteGlobero
   m_TagString: Untagged
   m_Icon: {fileID: 0}

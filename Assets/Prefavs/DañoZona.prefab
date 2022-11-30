@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5244615800511418388}
   - component: {fileID: 5244615800511418391}
   - component: {fileID: 5244615800511418384}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "Da\xF1oZona"
   m_TagString: Untagged
   m_Icon: {fileID: 0}

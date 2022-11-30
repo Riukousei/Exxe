@@ -53,7 +53,7 @@ public class SaludPersonaje : MonoBehaviour
     private void Muerte()
     {
         vida = 0f;
-        Debug.Log("Game Over");
+        Debug.Log("Game Over"); //Muestra si el personaje murió y tiene que haber game over
         playerAnimator.SetTrigger("Muerte");
 
     }

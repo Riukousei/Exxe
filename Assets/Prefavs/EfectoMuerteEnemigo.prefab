@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 524433334228077332}
   - component: {fileID: 9138521789220344307}
   - component: {fileID: 330665376894089349}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EfectoMuerteEnemigo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
