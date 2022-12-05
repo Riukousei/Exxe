@@ -10,7 +10,7 @@ public class Tamalero : MonoBehaviour
     public float speed = 1f;
     [SerializeField] private float dañoAtaque = 10f;
     [SerializeField] private float velocidadAtaque = 1f;
-    private float puedeAtacar;
+    public bool puedeAtacar = false;
     private Transform objetivo;
     [SerializeField] private Transform[] puntosMovimiento;
     [SerializeField] private float distanciaMinima=0.02f; //Distancia minima para el patrullaje
@@ -98,7 +98,7 @@ public class Tamalero : MonoBehaviour
         }
     }
 
-    private void OnCollisionStay2D(Collision2D other)
+    /*private void OnCollisionStay2D(Collision2D other)
     {
         Debug.Log("Colisionó con algo"); //Para mostrar si colisiona con algo el enemigo
         if (other.gameObject.tag == "Player")
@@ -118,7 +118,7 @@ public class Tamalero : MonoBehaviour
             }
             
         }
-    }
+    }*/
 
     private void OnTriggerEnter2D(Collider2D other)
     {

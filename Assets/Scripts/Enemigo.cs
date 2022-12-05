@@ -11,7 +11,7 @@ public class Enemigo : MonoBehaviour
     public float speed = 1f;
     [SerializeField] private float dañoAtaque = 10f;
     [SerializeField] private float velocidadAtaque = 1f;
-    private float puedeAtacar;
+    public bool puedeAtacar = false;
     private Transform objetivo;
     [SerializeField] private Transform[] puntosMovimiento;
     [SerializeField] private float distanciaMinima=0.02f; //Distancia minima para el patrullaje
@@ -34,21 +34,21 @@ public class Enemigo : MonoBehaviour
     {
         if (objetivo != null)
         {
-            Debug.Log("El enemigo va hacia el jugador"); //Para mostrar si el enemigo va hacia el jugador
+            /*Debug.Log("El enemigo va hacia el jugador"); //Para mostrar si el enemigo va hacia el jugador
             float step = speed * Time.deltaTime;
-            transform.position = Vector2.MoveTowards(transform.position, objetivo.position, step);
+            transform.position = Vector2.MoveTowards(transform.position, objetivo.position, step);*/
             MirarJugador();
         }
         else
         {
-            Debug.Log("El enemigo deambula"); //Para mostrar si el enemigo deambula por el escenario
+            /*Debug.Log("El enemigo deambula"); //Para mostrar si el enemigo deambula por el escenario
             float step = speed * Time.deltaTime;
             transform.position = Vector2.MoveTowards(transform.position, puntosMovimiento[numeroAleatorio].position, step);
             if (Vector2.Distance(transform.position, puntosMovimiento[numeroAleatorio].position) < distanciaMinima)
             {
                 numeroAleatorio = Random.Range(0, puntosMovimiento.Length);
                 Girar();
-            }
+            }*/
         }
     }
 
@@ -88,7 +88,7 @@ public class Enemigo : MonoBehaviour
         }
     }
 
-    private void OnCollisionStay2D(Collision2D other)
+    /*private void OnCollisionStay2D(Collision2D other)
     {
         Debug.Log("Colisionó con algo"); //Para mostrar si colisiona con algo el enemigo
         if (other.gameObject.tag == "Player")
@@ -108,7 +108,7 @@ public class Enemigo : MonoBehaviour
             }
             
         }
-    }
+    }*/
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -117,6 +117,7 @@ public class Enemigo : MonoBehaviour
         {
             objetivo = other.transform;
             Debug.Log("Fue al jugador"); //Para mostrar si detectó al jugador
+            puedeAtacar = true;
         }
     }
 
@@ -127,6 +128,7 @@ public class Enemigo : MonoBehaviour
         {
             objetivo = null;
             Debug.Log("El jugador salió");//Para mostrar si salió el jugador del trigger
+            puedeAtacar = false;
         }
     }
 
