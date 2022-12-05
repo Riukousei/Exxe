@@ -35,6 +35,15 @@ public class DisparoEnemigo : MonoBehaviour
     {
         animatorEnemigo.SetTrigger("Ataque");
         cooldownTimer = 1.5f;
-        Instantiate(proyectiles, firePoint.position, firePoint.rotation);
+        var bala=Instantiate(proyectiles, firePoint.position, firePoint.rotation);
+        if (this.gameObject.GetComponent<Enemigo>() != null)
+        {
+            bala.GetComponent<BalaEnemigo>().mirandoDerecha = this.gameObject.GetComponent<Enemigo>().mirandoDerecha;
+        }
+        else if (this.gameObject.GetComponent<Tamalero>() != null)
+        {
+            bala.GetComponent<BalaEnemigo>().mirandoDerecha = this.gameObject.GetComponent<Tamalero>().mirandoDerecha;
+        }
+        
     }
 }

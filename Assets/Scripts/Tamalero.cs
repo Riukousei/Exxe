@@ -18,7 +18,7 @@ public class Tamalero : MonoBehaviour
     private SpriteRenderer spriteRenderer; //Controla cómo se ve el personaje
     [SerializeField] private float Vida;
     [SerializeField] private GameObject efectoMuerte;
-    private bool mirandoDerecha = true;
+    public bool mirandoDerecha = true;
     private bool Caminando = false;
     public Animator animatorEnemigo;
 

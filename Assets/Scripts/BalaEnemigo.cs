@@ -11,6 +11,7 @@ public class BalaEnemigo : MonoBehaviour
     private Animator animator;
     private BoxCollider2D boxCollider;
     public Transform player_pos;
+    public bool mirandoDerecha;
 
     private void Awake()
     {
@@ -26,7 +27,15 @@ public class BalaEnemigo : MonoBehaviour
         Debug.LogWarning(posX);
         posY = player_pos.position.y;
         Debug.LogWarning(posY);
-        direccionDeMovimiento = new Vector2(-this.transform.position.x+posX, -this.transform.position.y-(-posY)).normalized;
+        if (mirandoDerecha)
+        {
+            direccionDeMovimiento = new Vector2(-this.transform.position.x + posX, -this.transform.position.y - (-posY)).normalized;
+        }
+        else
+        {
+            direccionDeMovimiento = new Vector2(this.transform.position.x - posX, -this.transform.position.y - (-posY)).normalized; 
+        }
+
         Debug.LogWarning(direccionDeMovimiento);
     }
     private void Update()

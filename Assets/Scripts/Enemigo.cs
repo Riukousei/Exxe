@@ -19,7 +19,7 @@ public class Enemigo : MonoBehaviour
     private SpriteRenderer spriteRenderer; //Controla cómo se ve el personaje
     [SerializeField] private float Vida;
     [SerializeField] private GameObject efectoMuerte;
-    private bool mirandoDerecha = true;
+    public bool mirandoDerecha = true;
     public Animator animatorEnemigo;
 
     private void Start()

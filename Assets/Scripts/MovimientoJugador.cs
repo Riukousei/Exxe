@@ -9,7 +9,7 @@ public class MovimientoJugador : MonoBehaviour
     private Vector2 direccionDeMovimiento;
     private Rigidbody2D rbPersonaje;
     public Animator playerAnimator;
-    [SerializeField]private bool mirandoDerecha = true;
+    public bool mirandoDerecha = true;
     public bool sePuedeMover = true;
     [SerializeField] private Vector2 velocidadRebote;
     // Es la primera en llamarse cuando el juego se ejecuta
