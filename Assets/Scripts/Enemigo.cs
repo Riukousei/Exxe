@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class Enemigo : MonoBehaviour
 {
+
+    public GameEvent GE; //Evento del sistema de puntuacion
+    public int puntos; //Sistema de puntuacion
     public float speed = 1f;
     [SerializeField] private float dañoAtaque = 10f;
     [SerializeField] private float velocidadAtaque = 1f;
@@ -134,6 +137,7 @@ public class Enemigo : MonoBehaviour
         animatorEnemigo.SetTrigger("Golpeado");
         if (Vida <= 0)
         {
+            Vida = 1000;
             Debug.Log("El enemigo debe morir"); //Para mostrar si la vida del enemigo es menor o igual a cero
             Muerte();
         }
@@ -141,6 +145,7 @@ public class Enemigo : MonoBehaviour
 
     private void Muerte()
     {
+        GE.Raise(this, puntos); // Los puntos que añade al morir el enemigo
         Instantiate(efectoMuerte, transform.position, Quaternion.identity);
         Destroy(gameObject);
         Debug.Log("El enemigo murió y se destruyó"); //Para mostrar si el enemigo se murió y destruyó

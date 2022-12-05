@@ -760,6 +760,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a30d5e10268cc804fb16ff9c74693d21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GE: {fileID: 11400000, guid: 76d976e08059a724fb994079bfc63b4b, type: 2}
+  puntos: 10
   speed: 1
   "da\xF1oAtaque": 20
   velocidadAtaque: 0.8
