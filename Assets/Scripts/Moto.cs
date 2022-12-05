@@ -65,7 +65,7 @@ public class Moto : MonoBehaviour
         Debug.Log("Colisionó con algo"); //Para mostrar si colisiona con algo el enemigo
         if (other.gameObject.tag == "Player")
         {
-            animatorEnemigo.SetTrigger("Ataque");
+            //animatorEnemigo.SetTrigger("Ataque");
             other.gameObject.GetComponent<SaludPersonaje>().UpdateHealth(dañoAtaque, other.GetContact(0).normal);
             Debug.Log("Haciendo daño Al jugador"); //Para mostrar si está haciendo daño al jugador
         }
@@ -95,7 +95,7 @@ public class Moto : MonoBehaviour
     {
         Debug.Log("El enemigo recibió daño"); //Para mostrar si el enemigo fue atacado
         Vida -= daño;
-        animatorEnemigo.SetTrigger("Golpeado");
+        //animatorEnemigo.SetTrigger("Golpeado");
         if (Vida <= 0)
         {
             Vida = 1000;

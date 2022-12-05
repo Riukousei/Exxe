@@ -47,8 +47,6 @@ GameObject:
   - component: {fileID: 8792291013911420565}
   - component: {fileID: 8792291013911420564}
   - component: {fileID: 8792291013911420649}
-  - component: {fileID: 8792291013911420567}
-  - component: {fileID: 8792291013911420566}
   - component: {fileID: 8792291013911420561}
   m_Layer: 8
   m_Name: Enemigo (2)
@@ -205,64 +203,6 @@ MonoBehaviour:
   distanciaMinima: 0.02
   Vida: 100
   efectoMuerte: {fileID: 0}
-  animatorEnemigo: {fileID: 0}
---- !u!114 &8792291013911420567
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8792291013911420560}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51d92e0ad24eb0d4a8bff373618e05e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GE: {fileID: 0}
-  puntos: 0
-  speed: 4
-  "da\xF1oAtaque": 20
-  velocidadAtaque: 0.4
-  puntosMovimiento:
-  - {fileID: 2871000802044750558}
-  - {fileID: 2871000802121271333}
-  - {fileID: 2871000801413146069}
-  - {fileID: 2871000802620744761}
-  - {fileID: 2871000802309453889}
-  - {fileID: 2871000802283083277}
-  - {fileID: 2871000802246253526}
-  distanciaMinima: 0.02
-  Vida: 100
-  efectoMuerte: {fileID: 8915346370360584008, guid: 955a3ce2f950af048af0989d53d4155c, type: 3}
-  animatorEnemigo: {fileID: 0}
---- !u!114 &8792291013911420566
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8792291013911420560}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a30d5e10268cc804fb16ff9c74693d21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GE: {fileID: 0}
-  puntos: 0
-  speed: 1
-  "da\xF1oAtaque": 20
-  velocidadAtaque: 0.8
-  puntosMovimiento:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  distanciaMinima: 0.02
-  Vida: 100
-  efectoMuerte: {fileID: 8915346370360584008, guid: 955a3ce2f950af048af0989d53d4155c, type: 3}
   animatorEnemigo: {fileID: 0}
 --- !u!95 &8792291013911420561
 Animator:

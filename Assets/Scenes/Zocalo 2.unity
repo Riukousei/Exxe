@@ -708,6 +708,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidadDeMovimiento: 5
   playerAnimator: {fileID: 0}
+  mirandoDerecha: 1
   sePuedeMover: 1
   velocidadRebote: {x: 1, y: 0}
 --- !u!95 &1204569653
@@ -774,6 +775,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df1aee48194298947b78aec015a80ac3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vidaObject: {fileID: 0}
   vidaMaxima: 100
   tiempoPerdidaControl: 1
   playerAnimator: {fileID: 0}
@@ -1568,31 +1570,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8792291013911420566, guid: ab27ff7c20863c64fa0d60af40e386e2, type: 3}
+    - target: {fileID: 0}
       propertyPath: puntosMovimiento.Array.data[0]
       value: 
       objectReference: {fileID: 622254562}
-    - target: {fileID: 8792291013911420566, guid: ab27ff7c20863c64fa0d60af40e386e2, type: 3}
+    - target: {fileID: 0}
       propertyPath: puntosMovimiento.Array.data[1]
       value: 
       objectReference: {fileID: 1854582265}
-    - target: {fileID: 8792291013911420566, guid: ab27ff7c20863c64fa0d60af40e386e2, type: 3}
+    - target: {fileID: 0}
       propertyPath: puntosMovimiento.Array.data[2]
       value: 
       objectReference: {fileID: 801447190}
-    - target: {fileID: 8792291013911420566, guid: ab27ff7c20863c64fa0d60af40e386e2, type: 3}
+    - target: {fileID: 0}
       propertyPath: puntosMovimiento.Array.data[3]
       value: 
       objectReference: {fileID: 563448751}
-    - target: {fileID: 8792291013911420566, guid: ab27ff7c20863c64fa0d60af40e386e2, type: 3}
+    - target: {fileID: 0}
       propertyPath: puntosMovimiento.Array.data[4]
       value: 
       objectReference: {fileID: 1268784871}
-    - target: {fileID: 8792291013911420566, guid: ab27ff7c20863c64fa0d60af40e386e2, type: 3}
+    - target: {fileID: 0}
       propertyPath: puntosMovimiento.Array.data[5]
       value: 
       objectReference: {fileID: 1599327151}
-    - target: {fileID: 8792291013911420566, guid: ab27ff7c20863c64fa0d60af40e386e2, type: 3}
+    - target: {fileID: 0}
       propertyPath: puntosMovimiento.Array.data[6]
       value: 
       objectReference: {fileID: 1769792582}
