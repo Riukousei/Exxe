@@ -202,7 +202,7 @@ MonoBehaviour:
   - {fileID: 2871000802246253526}
   distanciaMinima: 0.02
   Vida: 100
-  efectoMuerte: {fileID: 0}
+  efectoMuerte: {fileID: 2214409197012678850, guid: 1a8229dc22f197747a41f2161ade455c, type: 3}
   animatorEnemigo: {fileID: 0}
 --- !u!95 &8792291013911420561
 Animator:
