@@ -39,7 +39,8 @@ public class CombateCaC : MonoBehaviour
         {
             if (colisionador.CompareTag("Enemy"))
             {
-                if (colisionador.transform.GetComponent<Enemigo>() != null)
+                Debug.LogWarning(colisionador.transform.GetComponent<Enemigo>());
+                if ((colisionador.transform.GetComponent<Enemigo>() != null)&&(!colisionador.isTrigger))
                 {
                     colisionador.transform.GetComponent<Enemigo>().TomarDaño(dañoGolpe);
                 }
@@ -52,6 +53,10 @@ public class CombateCaC : MonoBehaviour
                     colisionador.transform.GetComponent<Moto>().TomarDaño(dañoGolpe);
                 }
 
+            }
+            else if (colisionador.gameObject.tag == "NPC")
+            {
+                colisionador.gameObject.GetComponent<NPC>().TomarDaño(dañoGolpe);
             }
         }
     }

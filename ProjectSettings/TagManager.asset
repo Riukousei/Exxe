@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - NPC
   layers:
   - Default
   - TransparentFX
@@ -48,14 +49,14 @@ TagManager:
   - name: Balas
     uniqueID: 4243995911
     locked: 0
+  - name: NPC
+    uniqueID: 4184353247
+    locked: 0
   - name: Fondo Enemigos
     uniqueID: 1628174509
     locked: 0
   - name: Enemigos
     uniqueID: 1669297757
-    locked: 0
-  - name: NPC
-    uniqueID: 4184353247
     locked: 0
   - name: Jugador
     uniqueID: 2385990571

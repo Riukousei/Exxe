@@ -40,6 +40,11 @@ public class Bala : MonoBehaviour
 
             Destroy(gameObject);
         }
+        else if (collision.gameObject.tag == "NPC")
+        {
+            collision.gameObject.GetComponent<NPC>().TomarDaño(daño);
+            Destroy(gameObject);
+        }
         else
         {
             Destroy(gameObject);
