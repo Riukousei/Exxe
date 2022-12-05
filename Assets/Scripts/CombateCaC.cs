@@ -39,7 +39,19 @@ public class CombateCaC : MonoBehaviour
         {
             if (colisionador.CompareTag("Enemy"))
             {
-                colisionador.transform.GetComponent<Enemigo>().TomarDaño(dañoGolpe);
+                if (colisionador.transform.GetComponent<Enemigo>() != null)
+                {
+                    colisionador.transform.GetComponent<Enemigo>().TomarDaño(dañoGolpe);
+                }
+                else if (colisionador.transform.GetComponent<Tamalero>() != null)
+                {
+                    colisionador.transform.GetComponent<Tamalero>().TomarDaño(dañoGolpe);
+                }
+                if (colisionador.transform.GetComponent<Moto>() != null)
+                {
+                    colisionador.transform.GetComponent<Moto>().TomarDaño(dañoGolpe);
+                }
+
             }
         }
     }
