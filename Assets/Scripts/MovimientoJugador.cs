@@ -9,7 +9,7 @@ public class MovimientoJugador : MonoBehaviour
     private Vector2 direccionDeMovimiento;
     private Rigidbody2D rbPersonaje;
     public Animator playerAnimator;
-    private bool mirandoDerecha = true;
+    [SerializeField]private bool mirandoDerecha = true;
     public bool sePuedeMover = true;
     [SerializeField] private Vector2 velocidadRebote;
     // Es la primera en llamarse cuando el juego se ejecuta
@@ -38,7 +38,14 @@ public class MovimientoJugador : MonoBehaviour
     }
     public void Rebote(Vector2 puntoGolpe)
     {
-        rbPersonaje.velocity = new Vector2(-velocidadRebote.x * puntoGolpe.x, 0); //verificar si velocidadRebote.y no se tiene que igualar a 0
+        if (mirandoDerecha)
+        {
+            rbPersonaje.velocity = new Vector2(-velocidadRebote.x * puntoGolpe.x, 0); //verificar si velocidadRebote.y no se tiene que igualar a 0
+        }
+        else
+        {
+            rbPersonaje.velocity = new Vector2(velocidadRebote.x * puntoGolpe.x, 0); //verificar si velocidadRebote.y no se tiene que igualar a 0
+        }
     }
 
     void CapturaDePulsaciones()

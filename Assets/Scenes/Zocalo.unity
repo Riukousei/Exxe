@@ -925,7 +925,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GE: {fileID: 11400000, guid: 76d976e08059a724fb994079bfc63b4b, type: 2}
   puntos: 10
-  speed: 1
+  speed: 3
   "da\xF1oAtaque": 20
   velocidadAtaque: 0.8
   puntosMovimiento:
@@ -1090,6 +1090,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidadDeMovimiento: 5
   playerAnimator: {fileID: 0}
+  mirandoDerecha: 1
   sePuedeMover: 1
   velocidadRebote: {x: 1, y: 0}
 --- !u!95 &1204569653
