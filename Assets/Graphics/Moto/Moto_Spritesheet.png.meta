@@ -42,12 +42,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 75
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -115,7 +115,343 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Moto_Spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 808
+        width: 324
+        height: 216
+      alignment: 9
+      pivot: {x: 0.27, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c0c37e007a4910479a69e9e39a032af
+      internalID: 1872481713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Moto_Spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 808
+        width: 324
+        height: 216
+      alignment: 9
+      pivot: {x: 0.27, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f229fbabc008f64e998fb13c621d1b6
+      internalID: 225336336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Moto_Spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 808
+        width: 324
+        height: 216
+      alignment: 9
+      pivot: {x: 0.27, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f07984c2995cc784b85b368c08d166bf
+      internalID: 1003698373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Moto_Spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 808
+        width: 324
+        height: 216
+      alignment: 9
+      pivot: {x: 0.27, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c32ea2a8b55b835409bbe597c0685289
+      internalID: -585647181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Moto_Spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 808
+        width: 324
+        height: 216
+      alignment: 9
+      pivot: {x: 0.27, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d746b14e1af90034f89c1cbd4d3618d0
+      internalID: -2001929985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Moto_Spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 808
+        width: 324
+        height: 216
+      alignment: 9
+      pivot: {x: 0.27, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7eddcc1b3a218ff4b872a207d45761bd
+      internalID: -1426582694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Moto_Spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 592
+        width: 324
+        height: 216
+      alignment: 9
+      pivot: {x: 0.27, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e65fc73017138c4abf4fb7ff94c9edd
+      internalID: -380701243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Moto_Spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 592
+        width: 324
+        height: 216
+      alignment: 9
+      pivot: {x: 0.27, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ac06428b7567fb418d4aa300b317f47
+      internalID: 545691675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Moto_Spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 592
+        width: 324
+        height: 216
+      alignment: 9
+      pivot: {x: 0.27, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e80303e027ae37f4e99707920a927678
+      internalID: 91449666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Moto_Spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 592
+        width: 324
+        height: 216
+      alignment: 9
+      pivot: {x: 0.27, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39eda2edfa0c0fb4ca28de90f0e10a18
+      internalID: 1585808843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Moto_Spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 592
+        width: 324
+        height: 216
+      alignment: 9
+      pivot: {x: 0.27, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73d81444793989646b79451270077e18
+      internalID: 1389024213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Moto_Spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 592
+        width: 324
+        height: 216
+      alignment: 9
+      pivot: {x: 0.27, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c187606e4b355043999749b38cb7326
+      internalID: -613487320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Moto_Spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 376
+        width: 324
+        height: 216
+      alignment: 9
+      pivot: {x: 0.27, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0d97696703047844b8d4b3d3b3bc3d6
+      internalID: 128520002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Moto_Spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 376
+        width: 324
+        height: 216
+      alignment: 9
+      pivot: {x: 0.27, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09b18775e208a67449a7a74dc7b556f6
+      internalID: -139840202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Moto_Spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 376
+        width: 324
+        height: 216
+      alignment: 9
+      pivot: {x: 0.27, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 013979a841060bf4688a8dfed26a422c
+      internalID: -1015495449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Moto_Spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 376
+        width: 324
+        height: 216
+      alignment: 9
+      pivot: {x: 0.27, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 830a1c974042de44191d5c625a7d26e1
+      internalID: -1332400964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -126,7 +462,23 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Moto_Spritesheet_12: 128520002
+      Moto_Spritesheet_7: 545691675
+      Moto_Spritesheet_8: 91449666
+      Moto_Spritesheet_2: 1003698373
+      Moto_Spritesheet_6: -380701243
+      Moto_Spritesheet_11: -613487320
+      Moto_Spritesheet_10: 1389024213
+      Moto_Spritesheet_3: -585647181
+      Moto_Spritesheet_13: -139840202
+      Moto_Spritesheet_9: 1585808843
+      Moto_Spritesheet_0: 1872481713
+      Moto_Spritesheet_15: -1332400964
+      Moto_Spritesheet_14: -1015495449
+      Moto_Spritesheet_5: -1426582694
+      Moto_Spritesheet_1: 225336336
+      Moto_Spritesheet_4: -2001929985
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
