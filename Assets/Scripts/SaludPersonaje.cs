@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class SaludPersonaje : MonoBehaviour
 {
+    public GameObject vidaObject;
     private float vida = 0f;
     [SerializeField] private float vidaMaxima = 100f;
     private MovimientoJugador movimientoJugador;
@@ -30,8 +33,11 @@ public class SaludPersonaje : MonoBehaviour
         }
         else if(vida <= 0f)
         {
+            vida = 0;
             Muerte();
         }
+        vidaObject.GetComponent<Slider>().value = vida;
+        vidaObject.GetComponentInChildren<TextMeshProUGUI>().text = vida.ToString();
     }
     public void UpdateHealth(float daño, Vector2 posicion)
     {
@@ -49,6 +55,8 @@ public class SaludPersonaje : MonoBehaviour
         {
             Muerte();
         }
+        vidaObject.GetComponent<Slider>().value = vida;
+        vidaObject.GetComponentInChildren<TextMeshProUGUI>().text = vida.ToString();
     }
     private void Muerte()
     {
