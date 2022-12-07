@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ExxeLlegada : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class ExxeLlegada : MonoBehaviour
         {
             response.Invoke(null,null);
             Debug.LogWarning("Llegaste al exxe");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 

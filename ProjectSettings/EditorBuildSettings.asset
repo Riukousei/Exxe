@@ -15,11 +15,23 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 110c05418662a684682826e7154e26b4
   - enabled: 1
-    path: Assets/Scenes/Colonia.unity
-    guid: 4c0223fbd853b5047b6f3cfde273e486
-  - enabled: 1
     path: Assets/Scenes/Zocalo.unity
     guid: 4bc08ce3bab94e042b65964c588d1722
+  - enabled: 1
+    path: Assets/Scenes/Zocalo 1.unity
+    guid: 332d145a7b106b745a90a3617e033459
+  - enabled: 1
+    path: Assets/Scenes/Zocalo 2.unity
+    guid: bc049178e7d6f25409d14366b2f87973
+  - enabled: 1
+    path: Assets/Scenes/Zocalo 3.unity
+    guid: faf21f111baa3f54a92539574fda3429
+  - enabled: 1
+    path: Assets/Scenes/Zocalo 4.unity
+    guid: b5ccd0a8675f4324da6c1c31e71549a5
+  - enabled: 1
+    path: Assets/Scenes/Colonia.unity
+    guid: 4c0223fbd853b5047b6f3cfde273e486
   - enabled: 1
     path: Assets/Scenes/Barrio.unity
     guid: 2cb96bf845d79e146b1ec8a74469814e
