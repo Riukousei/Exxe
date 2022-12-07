@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 162497635396981508}
   - component: {fileID: 6910583639595779075}
   - component: {fileID: 6910583639595779074}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Bala Enemigo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -151,7 +151,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6910583639595779135}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0

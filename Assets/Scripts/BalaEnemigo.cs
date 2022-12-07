@@ -44,10 +44,10 @@ public class BalaEnemigo : MonoBehaviour
         transform.Translate(direccionDeMovimiento*Velocidad*Time.deltaTime);
     }
     
-    private void OnCollisionStay2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.LogWarning(collision);
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.CompareTag("Player"))
         {
 
             collision.gameObject.GetComponent<SaludPersonaje>().UpdateHealth(daño, collision.GetContact(0).normal);
@@ -60,5 +60,5 @@ public class BalaEnemigo : MonoBehaviour
         }
 
     }
-    
+
 }

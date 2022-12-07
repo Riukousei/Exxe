@@ -11,6 +11,7 @@ public class Tamalero : MonoBehaviour
     [SerializeField] private float dañoAtaque = 10f;
     [SerializeField] private float velocidadAtaque = 1f;
     public bool puedeAtacar = false;
+    public float paraPoderAtacar;
     private Transform objetivo;
     [SerializeField] private Transform[] puntosMovimiento;
     [SerializeField] private float distanciaMinima=0.02f; //Distancia minima para el patrullaje
@@ -98,27 +99,27 @@ public class Tamalero : MonoBehaviour
         }
     }
 
-    /*private void OnCollisionStay2D(Collision2D other)
+    private void OnCollisionStay2D(Collision2D other)
     {
         Debug.Log("Colisionó con algo"); //Para mostrar si colisiona con algo el enemigo
         if (other.gameObject.tag == "Player")
         {
             Debug.Log("Fue con el Jugador la colisión"); //Para mostrar si colisiona con el jugador
-            if (velocidadAtaque <= puedeAtacar)
+            if (velocidadAtaque <= paraPoderAtacar)
             {
                 animatorEnemigo.SetTrigger("Ataque");
                 other.gameObject.GetComponent<SaludPersonaje>().UpdateHealth(dañoAtaque,other.GetContact(0).normal);
                 Debug.Log("Haciendo daño Al jugador"); //Para mostrar si está haciendo daño al jugador
-                puedeAtacar = 0f;
+                paraPoderAtacar = 0f;
             }
             else
             {
                 Debug.Log("No puede atacar"); //Para mostrar si no puede atacar
-                puedeAtacar += Time.deltaTime;
+                paraPoderAtacar += Time.deltaTime;
             }
             
         }
-    }*/
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
